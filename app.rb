@@ -17,8 +17,8 @@ module FormsLab
       s1_params = params[:pirate][:ship][0]
       s2_params = params[:pirate][:ship][1]
       @pirate = Pirate.new(p_params[:name],p_params[:height],p_params[:weight])
-      @ship_1 = Ship.new(s1_params)
-      @ship_2 = Ship.new(s2_params)
+      @ship_1 = Ship.new_from_hash(s1_params)
+      @ship_2 = Ship.new_from_hash(s2_params)
       erb :show
     end
   end
